@@ -23,13 +23,13 @@
 <!-- Accordion object.  Each section is separated by an <h3 /> header and the content is to be enclosed in <div />.  -->
 <div id="audioAccordion">
     <h3>
-        Audio Panel
-        <span style="float:right; margin-left: 10px" class="redPill-sm" onclick="window.open('https://docs.phantombot.tv/kb/audio')">Hilfe</span></span>
-        <span id="ionSoundLoaded"><span style="float: right" class="redPill-sm">Initialisiere...</span></span>
-        <span id="reloadSounds" style="float: right; margin-right: 10px" class="bluePill-sm" onclick="$.reloadAudioHooks()">Lade Audio Hooks neu</span>
+        Painel de audio
+        <span style="float:right; margin-left: 10px" class="redPill-sm" onclick="window.open('https://docs.phantombot.tv/kb/audio')">Ajuda</span></span>
+        <span id="ionSoundLoaded"><span style="float: right" class="redPill-sm">Pronto</span></span>
+        <span id="reloadSounds" style="float: right; margin-right: 10px" class="bluePill-sm" onclick="$.reloadAudioHooks()">Recarregar Áudio Hooks</span>
     </h3>
     <div>
-    <div id="_audioPanelDisabled">Panel deaktiviert weil Modul deaktiviert ist. (./systems/audioPanelSystem.js)</div>
+    <div id="_audioPanelDisabled">Painel desativado porque o módulo está desativado. (./systems/audioPanelSystem.js)</div>
     <div id="_audioPanel">
 
     <div>
@@ -46,56 +46,56 @@
     
     <h3>YouTube Player</h3>
     <div>
-    <div id="_youtubePlayerPanelDisabled">Panel deaktiviert weil Modul deaktiviert ist. (./systems/youtubePlayer.js)</div>
+    <div id="_youtubePlayerPanelDisabled">Painel desativado porque o módulo está desativado. (./systems/youtubePlayer.js)</div>
     <div id="_youtubePlayerPanel">
 
         <span id="youTubeLauncher">
-            <button type="button" class="btn btn-primary inline pull-left" onclick="$.launchYouTubePlayer()">Starte YouTube Player</button>
+            <button type="button" class="btn btn-primary inline pull-left" onclick="$.launchYouTubePlayer()">Iniciar YouTube Player</button>
         </span>
-        <button type="button" class="btn btn-primary inline pull-left" onclick="$.toggleYouTubePlayerRequests()">Song-Wunschliste An/Aus</button>
-        <button type="button" class="btn btn-primary inline pull-left" onclick="$.toggleYouTubePlayerNotify()">Chat-Benachrichtigungen An/Aus</button>
+        <button type="button" class="btn btn-primary inline pull-left" onclick="$.toggleYouTubePlayerRequests()">Hab/Desabilitar Song Request</button>
+        <button type="button" class="btn btn-primary inline pull-left" onclick="$.toggleYouTubePlayerNotify()">Notificações de chat on/off</button>
         <br><br><br>
 
         <form role="form">
             <div class="form-group" onkeypress="return event.keyCode != 13">
-                <label for="playlistName">Lade Playlist</label>
-                <button type="button" class="btn btn-primary inline pull-right" onclick="$.loadYtplaylist()">Laden</button>
-                <input type="text" class="form-control" id="playlistImput" placeholder="Playlistname" />
+                <label for="playlistName">Carregar Playlist</label>
+                <button type="button" class="btn btn-primary inline pull-right" onclick="$.loadYtplaylist()">Carrgar</button>
+                <input type="text" class="form-control" id="playlistImput" placeholder="Nome da Playlist" />
             </div>
         </form>
 
         <form role="form">
             <div class="form-group" onkeypress="return event.keyCode != 13">
-                <label for="ytpDJName">Festlegen des Playlist DJ Namens</label>
+                <label for="ytpDJName">Definir nome do DJ</label>
                 <button type="button" class="btn btn-primary inline pull-right" 
-                        onclick="$.setYouTubePlayerDJName()">Übermitteln</button>
+                        onclick="$.setYouTubePlayerDJName()">Enviar</button>
                 <input type="text" class="form-control" id="ytpDJNameInput" placeholder="DJ Name">
             </div>
         </form>
 
         <form role="form">
             <div class="form-group" onkeypress="return event.keyCode != 13">
-                <label for="ytpMaxRequests">Max. Parallele Anfragen</label>
+                <label for="ytpMaxRequests">Nº máx. de pedidos paralelos</label>
                 <button type="button" class="btn btn-primary inline pull-right" 
-                        onclick="$.setYouTubePlayerMaxReqs()">Übermitteln</button>
-                <input type="number" min="1" class="form-control" id="ytpMaxReqsInput" placeholder="Anfragen Anzahl">
+                        onclick="$.setYouTubePlayerMaxReqs()">Enviar</button>
+                <input type="number" min="1" class="form-control" id="ytpMaxReqsInput" placeholder="1">
             </div>
         </form>
 
         <form role="form">
             <div class="form-group" onkeypress="return event.keyCode != 13">
-                <label for="addKeyword">Max. Videolänge (Sekunden)</label>
+                <label for="addKeyword">Duração máx. (segundos)</label>
                 <button type="button" class="btn btn-primary inline pull-right" 
-                        onclick="$.setYouTubePlayerMaxLength()">Übermitteln</button>
-                <input type="number" min="1" class="form-control" id="ytpMaxLengthInput" placeholder="Max. Videolänge (Sekunden)">
+                        onclick="$.setYouTubePlayerMaxLength()">Enviar</button>
+                <input type="number" min="1" class="form-control" id="ytpMaxLengthInput" placeholder="Duração máx. (segundos">
             </div>
         </form>
 
         <form role="form">
             <div class="form-group" onkeypress="return event.keyCode != 13">
-                <label for="blacklistedSongs">Lied auf die schwarze Liste setzen</label>
-                <button type="button" class="btn btn-primary inline pull-right" onclick="$.blacklistSong()">Auf Liste setzen</button>
-                <input type="text" class="form-control" id="songBlacklist" placeholder="Liedtitel oder Schlüsselwort">
+                <label for="blacklistedSongs">Adicionar uma música à lista negra</label>
+                <button type="button" class="btn btn-primary inline pull-right" onclick="$.blacklistSong()">Adicionar à lista</button>
+                <input type="text" class="form-control" id="songBlacklist" placeholder="Nome da música ou palavra-chave">
             </div>
             <div id="ytplayerBSong" style="height: 100px; overflow: auto;" />
             <br>
@@ -103,9 +103,9 @@
 
         <form role="form">
             <div class="form-group" onkeypress="return event.keyCode != 13">
-                <label for="blacklistedusers">Benutzer auf die schwarze Liste setzen</label>
-                <button type="button" class="btn btn-primary inline pull-right" onclick="$.blacklistUser()">Auf Liste setzen</button>
-                <input type="text" class="form-control" id="userBlacklist" placeholder="BenutzerInnenname">
+                <label for="blacklistedusers">Adicionar usuários à lista negra</label>
+                <button type="button" class="btn btn-primary inline pull-right" onclick="$.blacklistUser()">Adicionar à lista</button>
+                <input type="text" class="form-control" id="userBlacklist" placeholder="Usuário">
             </div>
             <div id="ytplayerBUser" style="height: 100px; overflow: auto;" />
         </form>
